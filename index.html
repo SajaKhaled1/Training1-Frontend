@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>GitHub Repository Finder</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<main class="app">
+			<header class="app_h">
+				<div class="app_logo"></div>
+				<h1>GitHub Repository Finder</h1>
+			</header>
+
+			<section class="app_controls">
+				<div class="select">
+					<select id="languageSelect">
+						<option value="" selected>Select a Language</option>
+					</select>
+					<span class="select_arrow">▾</span>
+				</div>
+			</section>
+
+			<section id="statePanel" class="panel panel_neutral">
+				<p id="stateMessage">Please select a language</p>
+				<button id="retryButton" class="btn btn_danger hidden">Plese Click to retry</button>
+			</section>
+
+			<section id="repoCard" class="repo hidden" aria-live="polite" aria-atomic="true">
+				<div class="rep_top">
+					<h2 id="repoName"></h2>
+					<a id="repoExternal" class="rep_external" href="#" target="_blank" rel="noopener noreferrer">↗</a>
+				</div>
+				<p id="repoDescription" class="rep_description"></p>
+				<div class="rep_meta">
+					<span class="language" id="repoLanguage">•</span>
+					<span class="stat" title="Stars">⭐ <span id="repoStars">0</span></span>
+					<span class="stat" title="Forks">🍴 <span id="repoForks">0</span></span>
+					<span class="stat" title="Open issues">🧩 <span id="repoIssues">0</span></span>
+				</div>
+			</section>
+
+			<footer class="app_footer">
+				<button id="refreshButton" class="btn hidden">Refresh</button>
+			</footer>
+		</main>
+
+		<script src="app.js" defer></script>
+	</body>
+</html> 
